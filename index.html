@@ -4,41 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Médias</title>
+    <title>Agenda de Contatos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="./images/logo.png" alt="capelo e diploma">
-            <h1>Calculadora de Médias</h1>
+            <h1>Agenda de Contatos</h1>
         </header>
-        <form id="form-atividade">
-            <input type="text" id="nome-atividade" required placeholder="Nome da Atividade">
-            <input type="number" id="nota-atividade" required placeholder="Nota da Atividade" min="0" max="10">
-            <button type="submit">Adicionar +</button>
-        </form>
-        <table cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Nome da Atividade</th>
-                    <th>Nota da Atividade</th>
-                    <th>Aprovado?</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-                <tfoot>
+            <form id="form-contato">
+                <input type="text" id="nome-contato" placeholder="Nome e Sobrenome" required>
+                <input type="number" id="tel-contato" placeholder="Tel: (XX) 9XXXX-XXXX" required pattern="[0-9]{2}\s[0-9]{5}-[0-9]{4}">
+                <button type="submit" id="btn-enviar">Adicionar aos Contatos</button>
+            </form>
+            <h2>Contatos:</h2>
+            <table cellspacing="0">
+                <thead>
                     <tr>
-                        <td>Média Final</td>
-                        <td id="media-final-valor">---</td>
-                        <td id="media-final-resultado">---</td>
+                        <th>Nome</th>
+                        <th>Telefone</th>
                     </tr>
-                </tfoot>
-        </table>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
     </div>
     <script src="./main.js"></script>
 </body>
